@@ -1,5 +1,5 @@
- /* assets/css/style.css */
-body {
+  /* assets/css/style.css */
+  body {
     background-image: url('../images/front-view-woman-holding-compass.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,6 +75,20 @@ button.btn:hover {
     color: #000000;
     transform: scale(1.05);
 }
+
+   
+
+
+    
+
+
+
+
+
+
+
+
+
 
 
 

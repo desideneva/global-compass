@@ -9,7 +9,7 @@
     <!-- Custom CSS -->
     <style>
         body {
-            background-image: url('../images/travel-composition.jpg');
+            background-image: url('../images/actions-page.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -45,7 +45,7 @@
             text-align: center;
         }
 
-        .btn-container {
+        .btn-container, .signup-container, .signin-container, .share-story-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -60,25 +60,183 @@
         h1 {
             color: #f5f5f5;
         }
+
+        .signup-container, .signin-container {
+            display: none;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .signup-container h1, .signin-container h1, .share-story-container h1 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .form-group {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn-signup, .btn-signin, .btn-share {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .share-story-container {
+            display: none;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 class="mb-4">Explore Global Compass</h1>
         <div class="btn-container">
-            <button type="button" class="btn btn-outline-primary btn-custom">Sign In</button>
-            <button type="button" class="btn btn-outline-primary btn-custom">Sign Up</button>
-            <button type="button" class="btn btn-outline-primary btn-custom">Share Your Story</button>
+            <button type="button" class="btn btn-outline-primary btn-custom" onclick="showSignIn()">Sign In</button>
+            <button type="button" class="btn btn-outline-primary btn-custom" onclick="showSignUp()">Sign Up</button>
+            <button type="button" class="btn btn-outline-primary btn-custom" onclick="showShareStory()">Share Your Story</button>
             <button type="button" class="btn btn-outline-primary btn-custom">Browse Travel Stories</button>
             <button type="button" class="btn btn-outline-primary btn-custom">Contact Us</button>
             <button type="button" class="btn btn-outline-primary btn-custom" onclick="window.location.href='index.html'">Exit</button>
         </div>
+
+        <!-- Sign Up Section -->
+        <div class="signup-container" id="signUpContainer">
+            <h1>Sign Up</h1>
+            <div class="form-group">
+                <input type="text" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="repeatPassword" placeholder="Repeat Password">
+            </div>
+            <button type="button" class="btn btn-primary btn-signup">Sign Up</button>
+        </div>
+
+        <!-- Sign In Section -->
+        <div class="signin-container" id="signInContainer">
+            <h1>Sign In</h1>
+            <div class="form-group">
+                <input type="email" class="form-control" id="signinEmail" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="signinPassword" placeholder="Password">
+            </div>
+            <button type="button" class="btn btn-primary btn-signin">Sign In</button>
+        </div>
+
+        <!-- Share Story Section -->
+        <div class="share-story-container" id="shareStoryContainer">
+            <h1>Share Your Story</h1>
+            <div class="form-group">
+                <input type="text" class="form-control" id="countryVisited" placeholder="Country Visited">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" id="storyText" rows="5" placeholder="Write your story here..."></textarea>
+            </div>
+            <button type="button" class="btn btn-primary btn-share">Share</button>
+        </div>
     </div>
 
-    <!-- Bootstrap JS (optional if not needed for functionality) -->
+    <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha384-U4ST6zgpRkwOzIlKilIa8Njtfm2G46Jdil1F8R6h7oXVZw1iS24pMXypxCi+s+5A" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

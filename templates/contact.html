@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<!-- Contact Us Section -->
+<div class="contact-container body-container" id="contactContainer">
+    <h1>Contact Us</h1>
+    <div class="form-group">
+        <input type="text" class="form-control" id="contactName" placeholder="Name">
+    </div>
+    <div class="form-group">
+        <input type="email" class="form-control" id="contactEmail" placeholder="Email">
+    </div>
+    <div class="form-group">
+        <textarea class="form-control" id="contactMessage" rows="5" placeholder="Your Message"></textarea>
+    </div>
+    <button type="button" class="btn btn-primary btn-contact">Send Message</button>
+</div>
+{% endblock %}

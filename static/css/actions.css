@@ -63,6 +63,10 @@ h1 {
     color: #ffffff; 
 }
 
+.btn-hidden {
+    display: none;
+}
+
 .signup-container, .signin-container, .share-story-container, .contact-container {
     background-color: white;
     padding: 2rem;
@@ -73,14 +77,15 @@ h1 {
     text-align: center;
     flex-direction: column;
     color: #333; /* Set text color for form containers */
-    position: relative;
+    position: absolute;
     z-index: 1;
+    top:30% !important;
 }
 
 .signup-container h1, .signin-container h1, .share-story-container h1, .contact-container h1 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    color: #333; /* Set heading color */
+    color: #333;
 }
 
 .form-group {
@@ -106,15 +111,11 @@ h1 {
 .btn-signup:hover, .btn-signin:hover, .btn-share:hover, .btn-contact:hover {
     background-color: #343a40;
     color: #f8f9fa;
-}  
-
-.dropdown-item:hover {
-    background-color: #343a40;
-    color: #f8f9fa;
-}
+}   
 
 .body-container {
-    position:absolute !important;
-    border:1px solid red !important; 
-    top:35% !important;
+    padding: 20px;
+}
+.card {
+    margin-bottom: 20px;
 }

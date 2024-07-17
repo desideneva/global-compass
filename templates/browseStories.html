@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="body-container">
+    <div class="row row-cols-1 row-cols-md-2 g-4" id="storiesGrid">
+        {% for story in stories %}
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ story.countryVisited }}</h5>
+                        <p class="card-text">{{ story.storyText }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+

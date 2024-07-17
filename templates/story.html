@@ -2,15 +2,30 @@
 
 {% block body %}
 <div class="body-container"></div>
- <!-- Share Story Section -->
- <div class="share-story-container body-container" id="shareStoryContainer">
+<!-- Share Story Section -->
+<div class="share-story-container body-container" id="shareStoryContainer">
     <h1>Share Your Story</h1>
-    <div class="form-group">
-        <input type="text" class="form-control" id="countryVisited" placeholder="Country Visited">
-    </div>
-    <div class="form-group">
-        <textarea class="form-control" id="storyText" rows="5" placeholder="Write your story here..."></textarea>
-    </div>
-    <button type="button" class="btn btn-primary btn-share">Share</button>
+    <form id="shareStoryForm" enctype="multipart/form-data"> <!-- enctype attribute is necessary for file uploads -->
+        <div class="form-group">
+            <input type="text" class="form-control" id="countryVisited" name="countryVisited" placeholder="Country Visited">
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" id="storyText" name="storyText" rows="5" placeholder="Write your story here..."></textarea>
+        </div>
+        <div class="form-group">
+            <label for="image">Upload Image</label>
+            <input type="file" class="form-control-file" id="image" name="image">
+        </div>
+        <button type="button" class="btn btn-primary btn-share" onclick="submitStory()">Share</button>
+    </form>
+</div>
+
+<!-- Browse Stories Section -->
+<div class="browse-stories-container body-container" id="browseStoriesContainer" style="display:none;">
+    <h1>Travel Stories</h1>
+    <div class="stories-cards" id="storiesCards"></div>
 </div>
 {% endblock %}
+
+
+
